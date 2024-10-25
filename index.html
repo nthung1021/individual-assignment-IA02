@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bé tập tính</title>
+    <link href="css/style.css" rel="stylesheet">   
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
+        <h1 class="text-2xl font-bold mb-4 text-left">Bé tập tính</h1>
+
+        <div class="flex flex-row mb-2">
+            <div class="flex flex-col text-base w-1/4">
+                <label for="soThuNhat" class="block text-gray-900 my-2">Số thứ nhất</label>
+                <label for="soThuHai" class="block text-gray-900 my-2">Số thứ hai</label>
+                <label for="ketQua" class="block text-gray-900 my-2">Kết quả</label>
+            </div>
+
+            <div class="flex flex-col mx-2 w-7/12">
+                <input type="text" id="soThuNhat" class="border border-gray-300 p-2 w-full h-8 my-1">
+                <input type="text" id="soThuHai" class="border border-gray-300 p-2 w-full h-8 my-1">
+                <input type="text" id="ketQua" class="border border-gray-300 p-2 w-full h-8 my-1" readonly>
+            </div>
+
+            <div class="flex flex-col w-1/3">
+                <div class="grid grid-cols-2 text-base">
+                    <label><input type="radio" name="phepTinh" value="cong" class="ml-1 my-3.5"> Cộng</label>
+                    <label><input type="radio" name="phepTinh" value="tru" class="ml-1 my-3.5"> Trừ</label>
+                    <label><input type="radio" name="phepTinh" value="nhan" class="ml-1 my-3.5"> Nhân</label>
+                    <label><input type="radio" name="phepTinh" value="chia" class="ml-1 my-3.5"> Chia</label>
+                </div>
+               
+                <script src="javascript/script.js"></script>
+                <div class="ml-1">     
+                    <button onclick="tinh()" class="bg-gray-200 hover:bg-blue-100 text-black px-2 my-1 border-gray-400 border-2 font-sans">
+                    Tính
+                    </button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="flex flex-row text-base">
+            <label class="w-1/4">Thông báo: </label>
+            <div class="text-red-500 -ml-3" id="thongBao"></div>
+        </div>      
+
+    </div>
+
+</body>
+</html>
